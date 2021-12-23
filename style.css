@@ -1,0 +1,156 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+:root{
+   --mainBG : hsl(217,54%,11%);
+   --cardBG : hsl(216,50%,16%);
+   --line : hsl(215,32%,27%);
+   --colorPrimarySoftBlue: hsl(215,51%,70%);
+   --colorPrimaryCyan: hsl(178,100%,50%);
+}
+
+body{
+   background: var(--mainBG);
+   font-family: 'Outfit', sans-serif;
+   font-size: 18px;
+   color: white;
+}
+
+.container{
+   background: var(--cardBG);
+   border-radius: 15px;
+   width: 350px;
+   height: 596px;
+   padding: 1px;
+   margin: 151px auto;
+   filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+}
+
+.rectangle-copy{
+   background-image: linear-gradient(rgba(0,255,248,0), rgba(0,255,248,0)), url(images/image-equilibrium.jpg);
+   background-size: cover;
+   margin: 24px auto;
+   height: 302px;
+   width: 302px;
+   border-radius: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.rectangle-copy:active{
+   background-image: linear-gradient(rgba(0,255,248,0.5), rgba(0,255,248,0.5)), url(images/image-equilibrium.jpg);
+}
+
+
+.rectangle-copy svg{
+   display: none;
+}
+
+.rectangle-copy:active svg{
+   display: block;
+}
+
+.title{
+   margin-left: 24px;
+   margin-bottom: 18px;
+}
+
+.title h2{
+   font-weight: 600;
+   font-size: 22px;
+   line-height: 28px;
+   cursor: pointer;
+}
+
+.title h2:active{
+   color: var(--colorPrimaryCyan);
+}
+
+.description p{
+   margin-left: 24px;
+   font-size: 18px;
+   font-weight: 300;
+   color: var(--colorPrimarySoftBlue);
+   line-height: 24px;
+}
+
+.infos{
+   margin-top: 24px;
+   margin-left: 24px;
+   margin-right: 24px;
+   display: flex;
+   justify-content: space-between;
+   height: 20px;
+}
+
+.infos p{
+   font-size: 16px;
+}
+
+.infos-left, .infos-right{
+   display: flex;
+   justify-content: flex-start;
+}
+
+.infos-left p{
+   color: var(--colorPrimaryCyan);
+   padding-left: 7px;
+}
+
+.infos-right p{
+   color: var(--colorPrimarySoftBlue);
+   padding-left: 7px;
+}
+
+.separator{
+   margin-top: 24px;
+   margin-left: 24px;
+   margin-right: 24px;
+   width: 302px;
+   height: 1px;
+   background: var(--colorPrimarySoftBlue);
+}
+
+.creator{
+   margin-top: 16px;
+   margin-left: 24px;
+   margin-right: 24px;
+   height: 33px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.creator img{
+   width: 33px;
+   height: 33px;
+   border: 1px solid white;
+   border-radius: 50%;
+}
+
+.creator p{
+   font-size: 16px;
+   padding-left: 16px;
+}
+
+.creator p span{
+   color: var(--colorPrimarySoftBlue);
+   cursor: pointer;
+}
+
+.creator p:active{
+   color: var(--colorPrimaryCyan);
+}
+
+
+@media screen and (max-width: 425px) {
+   .container{
+      width: 327px;
+      margin: 61px auto;
+   }
+}
